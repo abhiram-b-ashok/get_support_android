@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My ProgressBar</string>
+    <string name="google_maps_key">YOUR_API_KEY_HERE</string>
+</resources>

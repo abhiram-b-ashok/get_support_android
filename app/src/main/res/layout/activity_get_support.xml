@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".getsupport.GetSupportActivity">
+    <TextView
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Support"
+       android:gravity="center"
+        android:id="@+id/heading"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="#A9023C"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading"
+        android:id="@+id/subHeading"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="20sp"
+        android:textColor="#7A5119"
+        android:text="We welcome your enquiries"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subHeading">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/supportParent"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="10dp"
+            >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Us a Message"
+            android:textSize="20sp"
+            android:textColor="#A9023C"
+            android:layout_marginStart="10dp"
+            android:id="@+id/formHeading"
+            android:fontFamily="sans-serif-condensed-medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/formSubHeading"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/formHeading"
+                android:layout_marginHorizontal="10dp"
+                android:maxLines="2"
+                android:layout_marginVertical="10dp"
+                android:text="Get in touch and Send your messages directly using the form below"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:id="@+id/nameLabel"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/formSubHeading"
+
+                android:layout_marginTop="20dp"
+                android:textSize="17sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameValue"
+                android:layout_marginHorizontal="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/nameLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                android:padding="5dp"
+                android:background="@drawable/form_edittext_background"
+                android:hint="Name"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F44336"
+                android:visibility="gone"
+                android:id="@+id/nameError"
+                android:text="This field is required"
+                app:layout_constraintStart_toStartOf="@+id/nameLabel"
+                app:layout_constraintTop_toBottomOf="@+id/nameValue"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email Address"
+                android:id="@+id/mailLabel"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameError"
+                android:layout_marginVertical="10dp"
+                android:textSize="17sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mailValue"
+                android:layout_marginHorizontal="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/mailLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/form_edittext_background"
+                android:inputType="textEmailAddress"
+                android:hint="Email"
+                android:maxLines="1"
+                android:padding="5dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F44336"
+                android:visibility="gone"
+                android:id="@+id/mailError"
+                android:text="This field is required"
+                app:layout_constraintStart_toStartOf="@+id/mailLabel"
+                app:layout_constraintTop_toBottomOf="@+id/mailValue"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Contact Reason"
+                android:id="@+id/reasonLabel"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mailError"
+                android:layout_marginVertical="10dp"
+                android:textSize="17sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reasonValue"
+                android:layout_marginHorizontal="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/reasonLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/form_edittext_background"
+                android:hint="Select Reason"
+                android:focusable="false"
+                android:padding="5dp"
+                android:drawableEnd="@drawable/drop_down"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F44336"
+                android:visibility="gone"
+                android:id="@+id/reasonError"
+                android:text="This field is required"
+                app:layout_constraintStart_toStartOf="@+id/reasonLabel"
+                app:layout_constraintTop_toBottomOf="@+id/reasonValue"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Contact Reason"
+                android:id="@+id/messageLabel"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reasonError"
+                android:layout_marginVertical="10dp"
+                android:textSize="17sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:id="@+id/messageValue"
+                android:layout_marginHorizontal="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/messageLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/form_edittext_background"
+                android:inputType="textEmailAddress"
+                android:hint="Message"
+                android:maxLines="3"
+                android:padding="5dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F44336"
+                android:visibility="gone"
+                android:text="This field is required"
+                android:id="@+id/messageError"
+                app:layout_constraintStart_toStartOf="@+id/messageLabel"
+                app:layout_constraintTop_toBottomOf="@+id/messageValue"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sendButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/messageError"
+                android:text="Send Message"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="20sp"
+                android:background="@drawable/send_button_shape"
+                android:padding="10dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
