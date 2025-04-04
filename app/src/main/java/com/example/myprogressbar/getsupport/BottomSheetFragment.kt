@@ -32,6 +32,7 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
             Reasons("Riding academy")
         )
 
+
         adapter = Adapter(list)
         adapter.onItemClicked = { selectedReason ->
             (activity as? GetSupportActivity)?.setSelectedValue(selectedReason.reasons)

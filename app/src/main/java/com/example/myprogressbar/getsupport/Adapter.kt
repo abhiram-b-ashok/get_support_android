@@ -26,10 +26,6 @@ class Adapter(private val reasonList: List<Reasons>): RecyclerView.Adapter<Adapt
         fun bind(reason: Reasons, onItemClicked: ((Reasons) -> Unit)?=null) {
             binding.apply {
                 reasonText.text = reason.reasons
-                if(reason.isSelected)
-                {
-                    reasonText.setBackgroundResource(R.drawable.selected_reason_background)
-                }
                 root.setOnClickListener {
                     onItemClicked?.invoke(reason)
                 }

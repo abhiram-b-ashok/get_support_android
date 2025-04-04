@@ -57,9 +57,9 @@ class GetSupportActivity : AppCompatActivity() {
             })
 
             nameValue.addTextChangedListener {nameError.visibility = View.GONE}
-            nameValue.addTextChangedListener {nameError.visibility = View.GONE}
-            nameValue.addTextChangedListener {nameError.visibility = View.GONE}
-            nameValue.addTextChangedListener {nameError.visibility = View.GONE}
+            mailValue.addTextChangedListener {mailError.visibility = View.GONE}
+            reasonValue.addTextChangedListener {reasonError.visibility = View.GONE}
+            messageValue.addTextChangedListener {messageError.visibility = View.GONE}
 
 
         }
